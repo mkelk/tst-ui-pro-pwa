@@ -9,6 +9,10 @@ export default defineNuxtConfig({
     srcDir: 'app/',
     strategies: 'generateSW',
 
+    devOptions: {
+      enabled: true,
+    },
+
     registerType: 'autoUpdate',
     injectRegister: 'auto',
 
@@ -21,7 +25,31 @@ export default defineNuxtConfig({
       name: 'Test PWA',
       short_name: 'TPWA',
       description: 'Testing PWA on Nuxt UO Pro',
-      theme_color: '#ffffff'
+      theme_color: '#ffffff',
+      icons: [
+        {
+          src: 'pwa-192x192.png',
+          sizes: '192x192',
+          type: 'image/png'
+        },
+        {
+          src: 'pwa-512x512.png',
+          sizes: '512x512',
+          type: 'image/png'
+        },
+        {
+          src: 'pwa-64x64.png',
+          sizes: '64x64',
+          type: 'image/png',
+          purpose: 'any'
+        },
+        {
+          src: 'maskable-icon-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'maskable'
+        }
+      ]
     },
 
     workbox: {

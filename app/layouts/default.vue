@@ -85,6 +85,7 @@ const colors = computed(() => defaultColors.value.map(color => ({ ...color, acti
 </script>
 
 <template>
+  <VitePwaManifest />
   <UDashboardLayout>
     <UDashboardPanel
       :width="250"
