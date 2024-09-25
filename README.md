@@ -20,6 +20,11 @@ npm run build
 npm run preview
 ```
 
+Installing vite-pwa raw
+```bash
+npx nuxi@latest module add @vite-pwa/nuxtnpx nuxi@latest module add @vite-pwa/nuxt
+```
+
 
 
 
