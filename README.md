@@ -9,6 +9,17 @@ Initial setup
 npx nuxi init -t github:nuxt-ui-pro/dashboard
 ```
 
+Running fine with
+```bash
+npm run dev
+```
+
+After license key in -env, running fine with
+```bash
+npm run build
+npm run preview
+```
+
 
 
 
