@@ -1,6 +1,4 @@
-![nuxt-ui-dashboard-social-card](https://github.com/nuxt-ui-pro/dashboard/assets/739984/f785284b-7db2-4732-af0e-2cb3c0bd7ca2)
-
-# Local notes
+# Local notes about PWA
 
 ## Installation
 
@@ -24,6 +22,36 @@ Installing vite-pwa raw
 ```bash
 npx nuxi@latest module add @vite-pwa/nuxtnpx nuxi@latest module add @vite-pwa/nuxt
 ```
+
+## Configuring PWA
+
+- Added conf for PWA in `nuxt.config.ts`
+- Added `favicon.svg` in `app/public`
+- Added `pwa-asset-generator` and `pwa-assets.config.js`
+
+## PWA only partially works
+
+PWA partially works. service worker is running and visible in the application tab.
+
+**Problem: The manifest is not shown, so the browser does not show the install popup. The manifest is generated in the output directory, but it is not used for some reason. It is not referenced in `index.html`**
+
+Notes: 
+- `npm run build` - works
+- `npm run preview` - works
+- Developer console does not show a manifest under the Application tab
+- Service worker is shown in the Application tab and is running
+- There seems to be to main directories in .output which seems like there is some confusion:
+  - `.output/public` - contains `index.html` and the generated manifest
+  - `.output/app/public` - contains the service worker
+
+![Output Directory](testing/output%20dir.png)
+![Service Worker](testing/serviceworker.png)
+![Service Worker 2](testing/serviceworker2.png)
+
+
+
+
+
 
 
 
